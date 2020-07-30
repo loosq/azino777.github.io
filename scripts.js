@@ -59,6 +59,12 @@ var ifContactFormReady = function () {
             }
         })
     })
+
+    $('.content-action__make-action').click(function() {
+        $('html, body').animate({
+            scrollTop: $(".make-order").offset().top
+        }, 500);
+    });
 }
 
 $(document).ready(function () {
