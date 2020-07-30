@@ -538,6 +538,8 @@ a {
             font-weight: normal;
             padding-left: 0;
             padding-right: 4px; }
+          .body-wrapper .make-order__list-total-text span:nth-child(2) {
+            margin-left: auto; }
         .body-wrapper .make-order__list-total .nav-button {
           max-width: 360px;
           padding: 13px 95px 13px 30px;
