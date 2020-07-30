@@ -649,6 +649,18 @@ a {
           @include font-style(normal, $fontSize + 2, $fontSize + 4, $mainColor);
         }
 
+        textarea {
+          background: #FFFFFF;
+          border: 1px solid #C9C9C9;
+          border-radius: 5px;
+          padding: 15px 10px;
+          max-width: 422px;
+          width: 100%;
+          outline: none;
+          resize: none;
+          @include font-style(normal, $fontSize + 2, $fontSize + 4, $mainColor);
+        }
+
         span {
           margin-bottom: 16px;
         }
@@ -658,6 +670,7 @@ a {
         }
 
         &-input-title {
+          max-width: 422px;
           @include font-style(bold, $fontSize, $fontSize + 2, $gray);
           margin-bottom: 4px;
           margin-top: 20px;
@@ -952,6 +965,7 @@ a {
       }
 
       &-error{
+        display: none;
         position: relative;
         bottom: -3px;
         & span {

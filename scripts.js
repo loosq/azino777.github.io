@@ -1,12 +1,6 @@
 var wrapper = $('.body-wrapper');
 
-// var submitForm = function () {
-//     wrapper.on('submit', 'form', function (e) {
-//         e.preventDefault();
-//         console.log($(this).serializeArray());
-//     })
-// }
-
+//для блока Заказать справку
 var ifFormReady = function () {
     let value = 0;
     wrapper.on('change', '.make-order__form input[type="checkbox"]', function (e) {
@@ -16,15 +10,14 @@ var ifFormReady = function () {
             btn = $('button', form),
             textInput = $('.make-order__list-item--text-input', item);
 
-        //change button
-        //console.log($this);
+        //убирает блок с кнопки
         if ($('input:checked', form).length) {
             btn.removeClass("disabled");
         } else {
             btn.addClass("disabled");
         }
 
-        //change total summ
+        //суммирует выбранные справки
         if ($this.prop('checked')) {
             $('input', textInput).val('');
             textInput.fadeIn(300);
@@ -34,10 +27,12 @@ var ifFormReady = function () {
             value -= parseInt($this.val());
         }
 
+        // меняет число общей суммы
         $('.make-order__list-total--value span', form).text(value);
     })
 }
 
+//форма Оформление заказа
 var ifContactFormReady = function () {
     var data = {
             name: '',
@@ -52,23 +47,27 @@ var ifContactFormReady = function () {
     });
 
     form.on('submit', function (e) {
-        e.preventDefault();
+        e.preventDefault(e);
         $(this).serializeArray().forEach(function (item) {
-            if ($('input', form).prop('name')) {
-
+            if (item.value === '') {
+                $('input[name=' + item.name + ']', form).siblings('.complete-order-form-error').fadeIn(300);
+            } else {
+                $('input[name=' + item.name + ']', form).siblings('.complete-order-form-error').fadeOut(300);
             }
         })
-    })
 
-    $('.content-action__make-action').click(function() {
+
+        console.log(data);
+    })
+}
+
+$(document).ready(function () {
+    //скролл к заказать справку
+    $('.content-action__make-action').click(function () {
         $('html, body').animate({
             scrollTop: $(".make-order").offset().top
         }, 500);
     });
-}
-
-$(document).ready(function () {
-    // submitForm();
     ifFormReady();
     ifContactFormReady();
 });

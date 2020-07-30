@@ -9,6 +9,7 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
 </head>
 <body class="body-wrapper">
+<!--Хедер-->
 <div class="header">
     <div class="header-info content-wrapper">
         <svg class="header-menu-button" width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -128,6 +129,9 @@
         </ul>
     </nav>
 </div>
+<!--конец-->
+
+<!--первая секция с заголовком Экспресс справка-->
 <section class="content-action">
     <div>
         <div class="content-action__title">Экспресс справка</div>
@@ -142,6 +146,9 @@
     </div>
     <img src="assets/action-content-img.png" alt="Изображение">
 </section>
+<!--конец-->
+
+<!--Блок приемущества за 30 минут-->
 <section class="content-advantages">
     <ul>
         <li class="content-advantages__list-item content-advantages__list-item--title">
@@ -192,6 +199,9 @@
         </li>
     </ul>
 </section>
+<!--конец-->
+
+<!--Блок Заказать справку-->
 <section class="make-order">
     <div class="make-order__title">Заказать справку</div>
     <div class="make-order__subtitle">Заказать информационную услугу можно как в комплексе, так и каждую по
@@ -201,8 +211,8 @@
         <div class="make-order__list">
             <div class="make-order__list-title">Выберите справки:</div>
             <div class="make-order__list-item">
-                <input type="checkbox" id="make-order__list-input--4" name="checkbox" value="60">
-                <label for="make-order__list-input--4">
+                <input type="checkbox" id="make-order__list-input--1" name="checkbox" value="30">
+                <label for="make-order__list-input--1">
                     <svg width="14" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M0 6.44669L4.79421 11.2501L14 2.05337L12.6784 0.75L4.79421 8.62499L1.30334 5.13415L0 6.44669Z"
                               fill="white"/>
@@ -212,30 +222,23 @@
                 <div class="make-order__list-item-price">Цена справки: 30 руб.</div>
                 <div class="make-order__list-item--text-input">
                     <div class="make-order__list-item-input-title">Введите ИНН проверяемого лица:</div>
-                    <input type="text" onkeyup="this.value=this.value.replace(/[^\d]/,'')" name="text">
+                    <input type="text" onkeyup="this.value=this.value.replace(/[^\d]/,'')" name="inn">
                 </div>
             </div>
             <div class="make-order__list-item">
-                <input type="checkbox" id="make-order__list-input--1" name="checkbox" value="50">
-                <label for="make-order__list-input--1">
-                    <svg width="14" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M0 6.44669L4.79421 11.2501L14 2.05337L12.6784 0.75L4.79421 8.62499L1.30334 5.13415L0 6.44669Z"
-                              fill="white"/>
-                    </svg>
-                    Заказать выписку из ЕГРЮЛ
-                </label>
-                <div class="make-order__list-item-price">Цена справки: 30 руб.</div>
-            </div>
-            <div class="make-order__list-item">
-                <input type="checkbox" id="make-order__list-input--2" name="checkbox" value="40">
+                <input type="checkbox" id="make-order__list-input--2" name="checkbox" value="30">
                 <label for="make-order__list-input--2">
                     <svg width="14" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M0 6.44669L4.79421 11.2501L14 2.05337L12.6784 0.75L4.79421 8.62499L1.30334 5.13415L0 6.44669Z"
                               fill="white"/>
                     </svg>
-                    Заказать выписку из ЕГРЮЛ
+                    Проверка паспорта на действительность
                 </label>
                 <div class="make-order__list-item-price">Цена справки: 30 руб.</div>
+                <div class="make-order__list-item--text-input">
+                    <div class="make-order__list-item-input-title">Серия и номер паспорта:</div>
+                    <input type="text" onkeyup="this.value=this.value.replace(/[^\d]/,'')" name="id">
+                </div>
             </div>
             <div class="make-order__list-item">
                 <input type="checkbox" id="make-order__list-input--3" name="checkbox" value="30">
@@ -244,9 +247,141 @@
                         <path d="M0 6.44669L4.79421 11.2501L14 2.05337L12.6784 0.75L4.79421 8.62499L1.30334 5.13415L0 6.44669Z"
                               fill="white"/>
                     </svg>
-                    Заказать выписку из ЕГРЮЛ
+                    Проверка прав собственности на недвижимое имущество (заказать выписку из ЕГРП)
                 </label>
                 <div class="make-order__list-item-price">Цена справки: 30 руб.</div>
+                <div class="make-order__list-item--text-input">
+                    <div class="make-order__list-item-input-title">Кадастровый номер объекта недвижимости:</div>
+                    <input type="text" name="number">
+                </div>
+            </div>
+            <div class="make-order__list-item">
+                <input type="checkbox" id="make-order__list-input--4" name="checkbox" value="30">
+                <label for="make-order__list-input--4">
+                    <svg width="14" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 6.44669L4.79421 11.2501L14 2.05337L12.6784 0.75L4.79421 8.62499L1.30334 5.13415L0 6.44669Z"
+                              fill="white"/>
+                    </svg>
+                    Проверка наличия блокировок по расчетному счету от ФНС
+                </label>
+                <div class="make-order__list-item-price">Цена справки: 30 руб.</div>
+                <div class="make-order__list-item--text-input">
+                    <div class="make-order__list-item-input-title">ИНН юридического лица:</div>
+                    <input type="text" onkeyup="this.value=this.value.replace(/[^\d]/,'')" name="inn">
+                </div>
+            </div>
+            <div class="make-order__list-item">
+                <input type="checkbox" id="make-order__list-input--5" name="checkbox" value="30">
+                <label for="make-order__list-input--5">
+                    <svg width="14" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 6.44669L4.79421 11.2501L14 2.05337L12.6784 0.75L4.79421 8.62499L1.30334 5.13415L0 6.44669Z"
+                              fill="white"/>
+                    </svg>
+                    Проверка наличия исполнительных производств
+                </label>
+                <div class="make-order__list-item-price">Цена справки: 30 руб.</div>
+                <div class="make-order__list-item--text-input">
+                    <div class="make-order__list-item-input-title">Наименование компании и юридический адрес (для юридических лиц):</div>
+                    <textarea rows="3" name="judicial_proceeding"></textarea>
+                </div>
+                <div class="make-order__list-item--text-input">
+                    <div class="make-order__list-item-input-title">ФИО и дата рождения (для физических лиц):</div>
+                    <input type="text" name="judicial_proceeding">
+                </div>
+            </div>
+            <div class="make-order__list-item">
+                <input type="checkbox" id="make-order__list-input--6" name="checkbox" value="30">
+                <label for="make-order__list-input--6">
+                    <svg width="14" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 6.44669L4.79421 11.2501L14 2.05337L12.6784 0.75L4.79421 8.62499L1.30334 5.13415L0 6.44669Z"
+                              fill="white"/>
+                    </svg>
+                    Проверка наличия зарегистрированных юридических лиц на  физическом лице
+                </label>
+                <div class="make-order__list-item-price">Цена справки: 30 руб.</div>
+                <div class="make-order__list-item--text-input">
+                    <div class="make-order__list-item-input-title">ИНН физического лица:</div>
+                    <input type="text" name="firms">
+                </div>
+            </div>
+            <div class="make-order__list-item">
+                <input type="checkbox" id="make-order__list-input--7" name="checkbox" value="30">
+                <label for="make-order__list-input--7">
+                    <svg width="14" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 6.44669L4.79421 11.2501L14 2.05337L12.6784 0.75L4.79421 8.62499L1.30334 5.13415L0 6.44669Z"
+                              fill="white"/>
+                    </svg>
+                    Проверка генерального директора и учредителя на массовость
+                </label>
+                <div class="make-order__list-item-price">Цена справки: 30 руб.</div>
+                <div class="make-order__list-item--text-input">
+                    <div class="make-order__list-item-input-title">ИНН  юридического лица либо ИНН физического лица:</div>
+                    <input type="text" name="firms_founder">
+                </div>
+            </div>
+            <div class="make-order__list-item">
+                <input type="checkbox" id="make-order__list-input--8" name="checkbox" value="30">
+                <label for="make-order__list-input--8">
+                    <svg width="14" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 6.44669L4.79421 11.2501L14 2.05337L12.6784 0.75L4.79421 8.62499L1.30334 5.13415L0 6.44669Z"
+                              fill="white"/>
+                    </svg>
+                    Наличие арбитражных дел
+                </label>
+                <div class="make-order__list-item-price">Цена справки: 30 руб.</div>
+                <div class="make-order__list-item--text-input">
+                    <div class="make-order__list-item-input-title">ИНН  юридического лица:</div>
+                    <input type="text" name="inn">
+                </div>
+            </div>
+            <div class="make-order__list-item">
+                <input type="checkbox" id="make-order__list-input--9" name="checkbox" value="30">
+                <label for="make-order__list-input--9">
+                    <svg width="14" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 6.44669L4.79421 11.2501L14 2.05337L12.6784 0.75L4.79421 8.62499L1.30334 5.13415L0 6.44669Z"
+                              fill="white"/>
+                    </svg>
+                    Информация о банкротствах юридических и физических лиц, а также сопутствующая информация
+                </label>
+                <div class="make-order__list-item-price">Цена справки: 30 руб.</div>
+                <div class="make-order__list-item--text-input">
+                    <div class="make-order__list-item-input-title">ИНН, наименование и  юридический адрес  (для юридического лица):ФИО и дата рождения для физического лица:</div>
+                    <input type="text" name="inn">
+                </div>
+                <div class="make-order__list-item--text-input">
+                    <div class="make-order__list-item-input-title">ФИО и дата рождения (для физического лица):</div>
+                    <textarea rows="3" name="judicial_proceeding"></textarea>
+                </div>
+            </div>
+            <div class="make-order__list-item">
+                <input type="checkbox" id="make-order__list-input--10" name="checkbox" value="30">
+                <label for="make-order__list-input--10">
+                    <svg width="14" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 6.44669L4.79421 11.2501L14 2.05337L12.6784 0.75L4.79421 8.62499L1.30334 5.13415L0 6.44669Z"
+                              fill="white"/>
+                    </svg>
+                    Решения судов по всем арбитражным делам, в которых участвовала компания
+                </label>
+                <div class="make-order__list-item-price">Цена справки: 30 руб.</div>
+                <div class="make-order__list-item--text-input">
+                    <div class="make-order__list-item-input-title">ИНН  юридического лица:</div>
+                    <input type="text" name="inn">
+                </div>
+            </div>
+            <div class="make-order__list-item">
+                <input type="checkbox" id="make-order__list-input--11" name="checkbox" value="200">
+                <label for="make-order__list-input--11">
+                    <svg width="14" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 6.44669L4.79421 11.2501L14 2.05337L12.6784 0.75L4.79421 8.62499L1.30334 5.13415L0 6.44669Z"
+                              fill="white"/>
+                    </svg>
+                    Комплексная проверка юридического лица
+                </label>
+                <div class="make-order__list-item-price">Цена справки: 200 руб.</div>
+                <div class="make-order__list-item--text-input">
+                    <div class="make-order__list-item-input-title">ИНН  юридического лица:</div>
+                    <input type="text" name="inn">
+                </div>
             </div>
         </div>
         <div class="make-order__list-total">
@@ -264,6 +399,9 @@
         </div>
     </form>
 </section>
+<!--конец-->
+
+<!--Форма Оформление заказа-->
 <section class="complete-order">
     <div class="complete-order-title">Оформление заказа</div>
     <div class="complete-order-subtitle">Заполните форму, чтобы мы знали как с&nbsp;вами&nbsp;связаться и куда отправмить готовые
@@ -308,6 +446,9 @@
         </div>
     </div>
 </section>
+<!--конец-->
+
+<!--Экран после заказа, можно использовать для "Заказ не оплачен" и "Заказ оплачен"-->
 <section class="order-no-payment">
     <div class="order-no-payment__title">Заказа не оплачен</div>
     <div class="order-no-payment__subtitle"><span>Номер заказа: 657.</span> Не удалось оплатить заказ. Попробуйте повторить оплату.</div>
@@ -318,11 +459,16 @@
                   fill="#30355D"/>
         </svg>
     </a>
-    <div class="order-no-payment__add-info">По вопросам звоните нам по телефону +7 (495) 150 51 01  или пишите на почту INFO@LEGALONS.COM</div>
+    <div class="order-no-payment__add-info">По вопросам звоните нам по телефону +7&nbsp;(495)&nbsp;150&nbsp;51&nbsp;01 или пишите на почту INFO@LEGALONS.COM</div>
 </section>
+<!--конец-->
+
+<!--Подвал-->
 <footer>
     2020 @ LEGALONS
 </footer>
+<!--конец-->
+
 <script type="text/javascript" src="./scripts.js"></script>
 </body>
 </html>

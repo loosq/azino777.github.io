@@ -475,6 +475,20 @@ a {
           font-size: 16px;
           line-height: 18px;
           color: #30355D; }
+        .body-wrapper .make-order__list-item textarea {
+          background: #FFFFFF;
+          border: 1px solid #C9C9C9;
+          border-radius: 5px;
+          padding: 15px 10px;
+          max-width: 422px;
+          width: 100%;
+          outline: none;
+          resize: none;
+          font-family: "Arial", sans-serif;
+          font-weight: normal;
+          font-size: 16px;
+          line-height: 18px;
+          color: #30355D; }
         .body-wrapper .make-order__list-item span {
           margin-bottom: 16px; }
         .body-wrapper .make-order__list-item-price {
@@ -484,6 +498,7 @@ a {
           line-height: 16px;
           color: #4F4F4F; }
         .body-wrapper .make-order__list-item-input-title {
+          max-width: 422px;
           font-family: "Arial", sans-serif;
           font-weight: bold;
           font-size: 14px;
@@ -731,6 +746,7 @@ a {
             line-height: 18px;
             color: #30355D; }
       .body-wrapper .complete-order-form-error {
+        display: none;
         position: relative;
         bottom: -3px; }
         .body-wrapper .complete-order-form-error span {
